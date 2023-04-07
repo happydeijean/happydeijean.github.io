@@ -31,7 +31,13 @@ function genTitle()
 {
     var grammar = tracery.createGrammar(data);
     var s = grammar.flatten("#origin#");
-    document.getElementById("gen").innerHTML = s;
+    if(s=="((origin))")
+    {
+        document.getElementById("gen").innerHTML = "Five Nights at Fetch Error";
+    }else{
+        document.getElementById("gen").innerHTML = s;
+    }
+    
 }
 
 function setData(input){

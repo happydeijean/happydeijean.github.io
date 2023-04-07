@@ -8,6 +8,11 @@
     <script src="js/home.js"></script>
     <script src="js/tracery/tracery.js"></script>
     <script type="module" src="js/titles.js"></script>
+    <script type="module" type="text/javascript">
+		import{returnTitles} from './js/titles.js'
+        returnTitles()
+        .then(data =>{setData(data);});
+    </script>
 </head>
 
 <div class="text">
@@ -15,13 +20,8 @@
 </div>
 
 <div class="text">
-    <p class="gen" id="gen">sample text</p>
+    <p class="gen" id="gen">Five Night at Freddy's</p>
     <button type="button" class="button" onclick="genTitle()">Generate</button>
-    <script type="module" type="text/javascript">
-		import{returnTitles} from './js/titles.js'
-		setData(returnTitles());
-        genTitle();
-    </script>
 </div>
 
 <body>
