@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>FNAF Title Generator</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <script src="js/home.js"></script>
+    <script src="js/tracery/tracery.js"></script>
+    <script type="module" src="js/titles.js"></script>
+</head>
+
+<div class="text">
+    <p>Five<br />Nights<br />at<br />Freddy's<br />Fan-Game<br />Title<br />Generator</p>
+</div>
+
+<div class="text">
+    <p class="gen" id="gen">sample text</p>
+    <button type="button" class="button" onclick="genTitle()">Generate</button>
+    <script type="module" type="text/javascript">
+		import{returnTitles} from './js/titles.js'
+		setData(returnTitles());
+        genTitle();
+    </script>
+</div>
+
+<body>
+	<img id="staticIMG" class="bg" src="images/static.gif">
+	<img id="freddy" class="bg" src="images/431.png">
+    <script type="text/javascript">
+        setInterval(bgRand, 80);
+    </script>
+</body>
+
+<footer>
+	<div id="credits">
+		<p>Contributors: <a href="https://twitter.com/NTG129">nomok</a>, <a href="https://twitter.com/ivannugget">Ivannugget</a>, <a href="https://twitter.com/Codeman2468">SlumLord</a></p>
+		<p>Five Nights at Freddy's © 2014-<span id="year"></span> Scott Cawthon</p>
+		<script type="module" type="text/javascript">
+			document.getElementById("year").innerHTML = new Date().getFullYear();
+		</script>
+	</div>
+	<div id="info">
+	<p><a href="https://twitter.com/FNAFtitleGen">Twitter</a><br /><a href="https://discord.com/oauth2/authorize?client_id=795423889038770217&scope=bot%20applications.commands&permissions=0">Discord Bot</a></p>
+	</div>
+</footer>
+
+</html>
