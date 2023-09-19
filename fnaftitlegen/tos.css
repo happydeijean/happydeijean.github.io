@@ -1,0 +1,94 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: none;
+}
+
+html, body {
+    background-color: black;
+}
+
+
+#background {
+    background-image: url('images/background.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	transition: filter 1s ease-in-out;
+	z-index: 1;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.back-button a {
+    color: white;
+    font-size: 2vw;
+    font-family: Consolas,monaco,monospace;
+    text-decoration: none;
+}
+
+#staticTOS {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2; 
+    opacity: 0; 
+	pointer-events: none;
+}
+
+#tosSong {
+    display: none;
+}
+
+#termsText {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;  
+    width: 80%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000; 
+	z-index: 3;
+	font-family: Consolas,monaco,monospace;
+}
+
+#termsText a {
+    color: #add8e6; 
+    text-decoration: underline; 
+}
+
+#termsText a:hover {
+    color: #87CEFA;
+}
+
+#centerClickArea {
+    position: absolute;
+    top: 35%;  
+    left: 35%;  
+    width: 30%;  
+    height: 30%;  
+    cursor: pointer;
+    z-index: 4;
+}
+
+#termsText.hidden {
+    display: none;
+}
+
+#background.blur {
+    filter: blur(8px);
+}
